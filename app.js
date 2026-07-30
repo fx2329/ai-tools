@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", showHome);
 /* ---- Home ---- */
 function renderHome(el) {
   el.innerHTML =
+    '<ins class="adsbygoogle" style="display:block;margin-bottom:20px" data-ad-client="ca-pub-5754174567008199" data-ad-slot="4567890123" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(window.adsbygoogle = window.adsbygoogle || []).push({});</script>' +
     '<div class="hero"><h1>Free Smart Online Tools</h1><p>AI-powered tools in your browser. No signups, private.</p></div>' +
     '<div class="grid">' +
     card("summarizer", "T", "rgba(59,130,246,.15)", "#60a5fa", "Text Summarizer", "Extract key sentences from any text") +
@@ -40,7 +41,9 @@ function card(id, icon, bg, color, title, desc) {
 /* ---- Back button helper ---- */
 function backBtn() { return '<button class="back-btn" onclick="showHome()">&#8592; All Tools</button>'; }
 function toolWrap(h2, desc, body) {
-  return '<div class="tool-page">' + backBtn() + '<h2>' + h2 + '</h2><p style="font-size:12px;color:#64748b;margin-bottom:10px">' + desc + '</p>' + body + '</div>';
+  return '<div class="tool-page">' + backBtn() + '<h2>' + h2 + '</h2><p style="font-size:12px;color:#64748b;margin-bottom:10px">' + desc + '</p>' +
+    '<ins class="adsbygoogle" style="display:block;margin-bottom:14px" data-ad-client="ca-pub-5754174567008199" data-ad-slot="5678901234" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(window.adsbygoogle = window.adsbygoogle || []).push({});</script>' +
+    body + '</div>';
 }
 
 /* ---- Text Summarizer ---- */
