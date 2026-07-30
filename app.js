@@ -290,3 +290,22 @@ function renderPcContent() {
 function doPc() { var v = parseFloat(document.getElementById("pcn-val").value) || 0, b = parseFloat(document.getElementById("pcn-base").value) || 0; document.getElementById("pcn-result").textContent = (b * v / 100).toFixed(2); }
 function doPcChange() { var f = parseFloat(document.getElementById("pcc-from").value) || 0, t = parseFloat(document.getElementById("pcc-to").value) || 0; document.getElementById("pcc-result").textContent = f ? ((t - f) / f * 100).toFixed(1) + "%" : "0%"; }
 function doTip() { var b = parseFloat(document.getElementById("tip-bill").value) || 0, p = parseFloat(document.getElementById("tip-pct").value) || 0, t = b * p / 100; document.getElementById("tip-result").textContent = "$" + (b + t).toFixed(2) + " (tip $" + t.toFixed(2) + ")"; }
+
+/* ---- Privacy ---- */
+function showPrivacy() {
+  document.getElementById("app").innerHTML =
+    '<div class="tool-page">' +
+    '<button class="back-btn" onclick="showHome()">&#8592; All Tools</button>' +
+    '<h2>Privacy Policy</h2>' +
+    '<div style="font-size:13px;color:#94a3b8;line-height:1.8;margin-top:12px">' +
+    '<p style="color:#64748b;margin-bottom:16px">Last updated: July 30, 2026</p>' +
+    '<h3 style="color:#e2e8f0;font-size:14px;margin-top:16px">Our Commitment</h3>' +
+    '<p>AI Tool Suite is designed with privacy as a core principle. <strong style="color:#e2e8f0">All tools run entirely in your browser.</strong> Your data never leaves your device.</p>' +
+    '<h3 style="color:#e2e8f0;font-size:14px;margin-top:16px">Data Collection</h3>' +
+    '<p>We do <strong style="color:#e2e8f0">not</strong> collect, store, or transmit any data you enter into our tools. No text, files, or any other content is ever sent to our servers or any third party.</p>' +
+    '<h3 style="color:#e2e8f0;font-size:14px;margin-top:16px">Analytics & Advertising</h3>' +
+    '<p>We may use Google Analytics and Google AdSense. These services may use cookies. No personally identifiable information is collected.</p>' +
+    '<h3 style="color:#e2e8f0;font-size:14px;margin-top:16px">Contact</h3>' +
+    '<p>For questions, open an issue on <a href="https://github.com/fx2329/ai-tools" target="_blank" style="color:#60a5fa">GitHub</a>.</p>' +
+    '</div></div>';
+}
